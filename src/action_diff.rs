@@ -5,15 +5,15 @@
 //! They would like a compact, semantically meaningful representation of the changes to the game state without needing to know
 //! about things like keybindings or input devices.
 
+use std::collections::{HashMap, HashSet};
+
 use bevy::{
     ecs::{
         entity::{Entity, MapEntities},
         event::Event,
         query::QueryFilter,
-    },
-    math::{Vec2, Vec3},
-    prelude::{EntityMapper, EventWriter, Query, Res},
-    utils::{HashMap, HashSet},
+    }, math::{Vec2, Vec3}, prelude::{EntityMapper, EventWriter, Query, Res}
+    
 };
 use serde::{Deserialize, Serialize};
 
@@ -82,7 +82,7 @@ pub struct ActionDiffEvent<A: Actionlike> {
 /// between different ECS worlds (e.g. client and server).
 impl<A: Actionlike> MapEntities for ActionDiffEvent<A> {
     fn map_entities<M: EntityMapper>(&mut self, entity_mapper: &mut M) {
-        self.owner = self.owner.map(|entity| entity_mapper.map_entity(entity));
+        self.owner = self.owner.map(|entity| entity_mapper.get_mapped(entity));
     }
 }
 

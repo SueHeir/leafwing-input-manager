@@ -1,12 +1,12 @@
 //! This module contains [`InputMap`] and its supporting methods and impls.
 
+use std::collections::HashMap;
 use std::fmt::Debug;
 use std::hash::Hash;
 
 #[cfg(feature = "asset")]
 use bevy::asset::Asset;
 use bevy::prelude::{Component, Deref, DerefMut, Entity, Gamepad, Query, Reflect, Resource, With};
-use bevy::utils::HashMap;
 use bevy::{log::error, prelude::ReflectComponent};
 use bevy::{
     math::{Vec2, Vec3},

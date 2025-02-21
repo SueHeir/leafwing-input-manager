@@ -1,15 +1,12 @@
 //! Logic for updating user input based on the state of the world.
 
-use std::any::TypeId;
+use std::collections::HashSet;
+use std::{any::TypeId, collections::HashMap};
 use std::hash::Hash;
 
 use bevy::{
-    app::{App, PreUpdate},
-    ecs::system::{StaticSystemParam, SystemParam},
-    math::{Vec2, Vec3},
-    prelude::{IntoSystemConfigs, ResMut, Resource},
-    reflect::Reflect,
-    utils::{HashMap, HashSet},
+    app::{App, PreUpdate}, ecs::system::{StaticSystemParam, SystemParam}, math::{Vec2, Vec3}, prelude::{IntoSystemConfigs, ResMut, Resource}, reflect::Reflect
+
 };
 
 use super::{Axislike, Buttonlike, DualAxislike, TripleAxislike};

@@ -12,7 +12,7 @@ use bevy::ecs::prelude::*;
 use bevy::prelude::Gamepad;
 use bevy::{
     time::{Real, Time},
-    utils::Instant,
+   platform_support::time::Instant,
 };
 
 use crate::action_diff::{ActionDiffEvent, SummarizedActionState};

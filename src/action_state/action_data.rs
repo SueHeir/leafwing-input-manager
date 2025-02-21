@@ -3,7 +3,7 @@
 use bevy::{
     math::{Vec2, Vec3},
     reflect::Reflect,
-    utils::Instant,
+    platform_support::time::Instant,
 };
 use serde::{Deserialize, Serialize};
 

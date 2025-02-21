@@ -71,6 +71,7 @@ impl Buttonlike for KeyCode {
             logical_key: Key::Unidentified(NativeKey::Unidentified),
             state: ButtonState::Pressed,
             repeat: false,
+            text: None,
             window: Entity::PLACEHOLDER,
         });
     }
@@ -87,6 +88,7 @@ impl Buttonlike for KeyCode {
             logical_key: Key::Unidentified(NativeKey::Unidentified),
             state: ButtonState::Released,
             repeat: false,
+            text: None,
             window: Entity::PLACEHOLDER,
         });
     }

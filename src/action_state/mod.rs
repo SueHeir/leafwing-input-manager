@@ -4,11 +4,12 @@ use crate::input_map::UpdatedValue;
 use crate::{action_diff::ActionDiff, input_map::UpdatedActions};
 use crate::{Actionlike, InputControlKind};
 
+use bevy::platform_support::collections::HashMap;
 use bevy::prelude::Resource;
 use bevy::reflect::Reflect;
 #[cfg(feature = "timing")]
 use bevy::utils::Duration;
-use bevy::utils::{HashMap, Instant};
+use bevy::platform_support::time::Instant;
 use bevy::{ecs::component::Component, prelude::ReflectComponent};
 use bevy::{
     math::{Vec2, Vec3},

@@ -163,8 +163,8 @@ impl<A: Actionlike + TypePath + bevy::reflect::GetTypeRegistration> Plugin
                         .after(InputSystem),
                 );
 
-                #[cfg(feature = "picking")]
-                app.configure_sets(PreUpdate, InputManagerSystem::Update.before(PickSet::Focus));
+                // #[cfg(feature = "picking")]
+                // app.configure_sets(PreUpdate, InputManagerSystem::Update.before(PickSet::Focus));
 
                 // FixedMain schedule
                 app.add_systems(

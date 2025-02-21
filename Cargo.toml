@@ -49,19 +49,19 @@ egui = ['dep:bevy_egui']
 
 [dependencies]
 leafwing_input_manager_macros = { path = "macros", version = "0.16" }
-bevy = { version = "0.15.0", default-features = false, features = [
+bevy = { git = "https://github.com/bevyengine/bevy.git", default-features = false, features = [
   "serialize",
 ] }
-bevy_egui = { version = "0.32", optional = true, default-features = false }
-itertools = "0.14"
-serde = { version = "1.0", features = ["derive"] }
-serde_flexitos = "0.2"
-dyn-clone = "1.0"
-dyn-eq = "0.1"
-dyn-hash = "0.2"
+bevy_egui = { version = "*", optional = true, default-features = false }
+itertools = "*"
+serde = { version = "*", features = ["derive"] }
+serde_flexitos = "*"
+dyn-clone = "*"
+dyn-eq = "*"
+dyn-hash = "*"
 
 [dev-dependencies]
-bevy = { version = "0.15.0", default-features = false, features = [
+bevy = {  git = "https://github.com/bevyengine/bevy.git", default-features = false, features = [
   "bevy_asset",
   "bevy_sprite",
   "bevy_text",
